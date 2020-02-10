@@ -11,7 +11,7 @@ public class User implements Serializable {
     private static final long serialVersionUID = -7546890350166006547L;
 
     @Id
-    private String Id;
+    private String id;
     private String name;
     private String email;
 
@@ -19,17 +19,17 @@ public class User implements Serializable {
     }
 
     public User(String id, String name, String email) {
-        Id = id;
+        id = id;
         this.name = name;
         this.email = email;
     }
 
     public String getId() {
-        return Id;
+        return id;
     }
 
     public void setId(String id) {
-        Id = id;
+        id = id;
     }
 
     public String getName() {
@@ -53,11 +53,11 @@ public class User implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return Objects.equals(Id, user.Id);
+        return Objects.equals(id, user.id);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(Id);
+        return Objects.hash(id);
     }
 }
