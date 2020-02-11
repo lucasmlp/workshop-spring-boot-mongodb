@@ -1,4 +1,4 @@
-package com.machado.workshopmongo.services;
+package com.machado.workshopmongo.services.exceptions;
 
 public class ObjectNotFoundException extends RuntimeException{
 

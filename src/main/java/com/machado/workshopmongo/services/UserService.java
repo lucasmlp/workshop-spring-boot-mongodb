@@ -3,6 +3,7 @@ package com.machado.workshopmongo.services;
 import com.machado.workshopmongo.domain.User;
 import com.machado.workshopmongo.dto.UserDTO;
 import com.machado.workshopmongo.repositories.UserRepository;
+import com.machado.workshopmongo.services.exceptions.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
