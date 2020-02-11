@@ -19,7 +19,7 @@ public class User implements Serializable {
     }
 
     public User(String id, String name, String email) {
-        id = id;
+        this.id = id;
         this.name = name;
         this.email = email;
     }
@@ -29,7 +29,7 @@ public class User implements Serializable {
     }
 
     public void setId(String id) {
-        id = id;
+        this.id = id;
     }
 
     public String getName() {
