@@ -1,5 +1,6 @@
 package com.machado.workshopmongo.resources;
 
+import com.machado.workshopmongo.domain.Post;
 import com.machado.workshopmongo.domain.User;
 import com.machado.workshopmongo.dto.UserDTO;
 import com.machado.workshopmongo.services.UserService;
@@ -52,5 +53,11 @@ public class UserResource {
         user.setId(id);
         user = userService.updateUser(user);
         return ResponseEntity.noContent().build();
+    }
+
+    @RequestMapping(value = "/{id}/postList",method = RequestMethod.GET)
+    public ResponseEntity<List<Post>> getPostList(@PathVariable String id){
+        User user = userService.getById(id);
+        return ResponseEntity.ok().body(user.getPostList());
     }
 }
